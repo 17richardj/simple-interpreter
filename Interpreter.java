@@ -99,27 +99,27 @@ public class Interpreter {
 	    	case ADDR:						
 	    		PC+=2;						
 	    		return PC-1;
-			case LDI:						//Load Register with value of data
+		case LDI:						//Load Register with value of data
 	    		PC+=2;
 	    		return PC - 1;
-			case LDM:
+		case LDM:
 	    		PC+=2;
 	    		return memory[PC-1];
-			case ST:
+		case ST:
 	    		PC+=2;
 	    		return PC-2;				//ST points to different location, as is required to fulfill task
-			case HALT:
-				PC+=2;
-				return PC-1;
-			case CLR:
-				PC+=2;
-				return PC-1;
-			case DBG:
-				PC+=2;
-				return PC-1;
-			case NODBG:
-				PC+=2;
-				return PC-1;			
+		case HALT:
+			PC+=2;
+			return PC-1;
+		case CLR:
+			PC+=2;
+			return PC-1;
+		case DBG:
+			PC+=2;
+			return PC-1;
+		case NODBG:
+			PC+=2;
+			return PC-1;			
 	    	default:
 	    		return -1;					//else return -1
     	}
